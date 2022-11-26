@@ -1,0 +1,44 @@
+<body>
+    <h1>UPDATE POST IT</h1>
+    <div class="container-form" id="update-form">
+      <form id={{originalPostItId}} action="/postit/update" method="post" role="form" enctype="application/x-www-form-urlencoded">
+      <h2>Current State of Post It</h2>
+      {{#each currentPostIt}}
+      {{!-- eventually we should probably have two classes here --}}
+      <li class="post-it" id={{post_id}}>
+        <label for="original_title">Current Title: {{title}}</label>
+        <label for="current_description">Current Description: {{description}}</label>
+        <label for="current_weekday">Current Weekday: {{weekday}}</label>
+         </li>
+      {{/each}}
+
+        <h1>{{message}}</h1>
+
+        <label for="description"> Description of Post It </label>
+        <input type="text" id="description" name="description">
+
+        <label for="pinned">
+          <input type="checkbox" id="pinned" name="pinned"/> Urgent: Pin it!
+        </label>
+
+        <select name="weekday" id="weekday">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+        </select>
+
+        <select name="category" id="category">
+        {{#each category}}
+        <option value={{title}}>{{title}}</option>
+        {{/each}}
+        </select> 
+
+        <button name="post_id" id={{originalPostItId}} value="{{originalPostItId}}" type="submit"> Confirm </button>
+      </form>
+    </div>
+
+</body>

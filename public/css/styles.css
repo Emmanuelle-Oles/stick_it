@@ -1,0 +1,56 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    list-style: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#container-dashboard{
+    background-color: lightpink;
+}
+
+.container-post-it{
+    background-color: lightyellow;
+}
+.post-it{
+    background-color: lightblue;
+}
+
+.user-navbar{
+    justify-content: flex-end;
+    /* color: pink; */
+}
+.navbar-user-container{
+    flex:1;
+    display: flex;
+}
+
+.navbar-homepage{
+    justify-content: flex-start;
+    /* color: pink; */
+}
+
+.navbar-item{
+    background-color: pink;
+    width: 150px;
+    text-align: center;
+}
+
+.navbar-user-item{
+
+    background-color: lightblue;
+    text-align: center;
+    flex: 1;
+}
+
+#carousel{
+    background-color:aquamarine;
+    min-height: 500px;
+}
+

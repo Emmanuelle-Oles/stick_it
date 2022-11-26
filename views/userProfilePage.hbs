@@ -1,0 +1,14 @@
+<div class="navbar-user-container">
+    <ul class="navbar-user">
+            {{#each pageData.userNavBarContent}}
+                <li class="navbar-user-item"><a href="{{path}}/{{email}}">{{title}}</a></li>
+            {{/each}}
+    </ul>
+</div>
+
+<img src="{{pageData.icon}}">
+<ul>
+    
+    <li>Email: {{pageData.email}}</li>
+    <li>Username: {{pageData.username}}</li>
+</ul>

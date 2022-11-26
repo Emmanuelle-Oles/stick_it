@@ -1,0 +1,11 @@
+<h1> ALL POST ITS</h1>
+<div>
+    <ul> 
+    {{#each postIt}}
+    {{!-- eventually we should probably have two classes here --}}
+        <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}} </li>
+    {{/each}}
+
+    </ul>
+
+</div>

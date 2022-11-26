@@ -1,0 +1,32 @@
+{
+  "name": "stick_it",
+  "version": "1.0.0",
+  "description": "Final Project for Web Programming II.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Angela Shanmugam, Sarim Ali Syed and Emmanuelle Oleszczuk",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.0",
+    "express-handlebars": "^6.0.5",
+    "express-list-routes": "^1.1.3",
+    "jest": "^28.0.2",
+    "jest-puppeteer": "^6.1.0",
+    "jsdoc": "^3.6.10",
+    "mysql2": "^2.3.3",
+    "pino": "^7.11.0",
+    "pino-caller": "^3.2.0",
+    "pino-http": "^6.6.0",
+    "pino-pretty": "^7.6.1",
+    "supertest": "^6.2.3",
+    "uuid": "^8.3.2",
+    "validator": "^13.7.0"
+  }
+}

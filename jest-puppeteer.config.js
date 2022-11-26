@@ -1,0 +1,1 @@
+module.exports={launch:{headless:false,slowMo:50},server:{command:'node server.js bulletin_board_test',port:1339}}

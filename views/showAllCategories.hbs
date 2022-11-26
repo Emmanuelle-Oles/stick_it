@@ -1,0 +1,59 @@
+<table>
+    <tr> 
+
+        {{!-- titles --}}
+        <th>Title</th>
+        <th>Description</th>
+        <th>Color</th>
+    </tr>
+     {{#each category}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td id="{{color_id}}">{{color_id}}</td>
+        <form action="/category/delete" method="POST" onsubmit="this.action = this.action +'/'+{{category_id}}"> 
+        <td><button type="submit">Delete</button></td>
+        </form>
+        
+    </tr>
+    {{/each}}
+
+    {{!-- <ul>
+        {{#each category}}
+        <li id="{{category_id}}"> {{title}} {{description}} {{color_code}}
+        <form action="/category/delete" method="POST" onsubmit="this.action = this.action +'/'+{{category_id}}"> 
+        <button type="submit">Delete</button>
+        </form>
+        </li>
+
+            <td><button action="/category/delete" method="POST" class="deleteBtn" type="button">Delete</button></td>
+            </tr>
+        {{/each}}
+        
+    </ul> --}}
+
+
+</table>
+
+
+
+<style>
+    table, th, td {
+  border:1px solid black;
+  margin:10px;
+
+}
+th,td{
+    width: 600px;
+}
+
+</style>
+<script>
+    let theButton = document.getElementsByClassName("deleteBtn");
+
+    async function deleteSelectedItem(btn){
+        console.log('button pressed');
+    }
+    theButton.addEventListener("click", deleteSelectedItem)
+
+</script>

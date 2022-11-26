@@ -1,0 +1,42 @@
+<header>
+    {{!-- option to page frequenters nav bar  --}}
+    {{#if displayUserNavBar}}
+    <nav class="navbar-user">
+        <div class="navbar-user-container">
+            <p>LOGO</p>
+        </div>
+        <div class="navbar-user-container">
+            <ul class="navbar-user">
+                {{#each userNavBarContent}}
+                    <li class="navbar-user-item"><a href="{{path}}">{{title}}</a></li> 
+                {{/each}}
+            </ul>
+        </div>
+    </nav>
+    {{/if}}
+
+     {{!-- home page options  --}}
+    {{#if displayHomePage}}
+    <nav class="navbar navbar-homepage">
+        <ul>
+            {{#each homeNavBarContent}}
+            <li class="navbar-item"><a href="{{path}}">{{title}}</a></li>
+            
+            {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+
+    {{#if displayLoggedInUser}}
+    {{!-- logged in options --}}
+    <nav class="navbar-logged-container">
+        <ul>
+            {{#each navBarContent}}
+            <li class="navbar-item"><a href="{{path}}">{{title}}</a></li>
+            {{/each}}
+
+        </ul>
+    </nav>
+
+    {{/if}}
+</header>

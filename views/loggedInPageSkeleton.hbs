@@ -1,0 +1,284 @@
+<body>
+    {{!-- container dashboard --}}
+    <div id="container-dashboard">
+        <h1>{{currentDayDisplayed}}</h1>
+
+        {{#if displaySunday}}
+            <div class="container-post-i" id="remove-form">
+                <h1>SUNDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="sunday">
+                    {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        {{#if displayMonday}}
+        <div class="container-post-it" id="add-form">
+            <h1>MONDAY DASHBOARD PLACEHOLDER</h1>
+            <ul id="monday">
+                {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        {{/if}}
+
+        {{#if displayTuesday}}
+            <div class="container-post-it" id="show-form">
+                <h1>TUESDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="tuesday">
+                    {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        {{#if displayWednesday}}
+            <div class="container-post-it" id="edit-form">
+                <h1>WEDNESDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="wednesday">
+                    {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+                       
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        {{/if}}
+
+        {{#if displayThursday}}
+            <div class="container-post-it" id="remove-form">
+                <h1>THURSDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="thursday">
+                    {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        {{#if displayFriday}}
+            <div class="container-post-it" id="remove-form">
+                <h1>FRIDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="friday">
+                    {{#each postItForDay}}
+                    <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+                      
+                        <form id={{post_id}} action='/update' method="get" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> ✏️ </button>
+                        </form>
+                        
+                        <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit"> 🗑️ </button>
+                        </form>
+
+
+                        <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                        onsubmit="this.action = this.action + '/' + this.id">
+                            <button type="submit">COMPLETED</button>
+                        </form>
+                        {{!-- <form action={{checkedPath}} method="post" role="form">
+                            <button type="submit"> CHECKBOX </button>
+                        </form> --}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        {{#if displaySaturday}}
+            <div class="container-post-it" id="remove-form">
+                <h1>SATURDAY DASHBOARD PLACEHOLDER</h1>
+                <ul id="saturday">
+                    {{#each postItForDay}}
+                        {{#if (eq pinned "T")}}
+                        <div id="pinned-post-it">
+                            <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                            <form id={{post_id}} action='/update' method="get" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit"> ✏️ </button>
+                            </form>
+                            
+                            <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit"> 🗑️ </button>
+                            </form>
+
+
+                            <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit">COMPLETED</button>
+                            </form>
+
+                            </li>
+                        </div>
+                        {{/if}}
+
+                        {{#if (eq pinned 'F') }}
+                        <div id="pinned-post-it">
+                            <li class="post-it" id={{post_id}}> Title: {{title}} description: {{description}} weekday {{day_of_week}}
+
+                            <form id={{post_id}} action='/update' method="get" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit"> ✏️ </button>
+                            </form>
+                            
+                            <form id={{post_id}} action='/postit/delete' method="post" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit"> 🗑️ </button>
+                            </form>
+
+
+                            <form id={{post_id}} action="/postit/complete"  method="post" role="form"
+                            onsubmit="this.action = this.action + '/' + this.id">
+                                <button type="submit">COMPLETED</button>
+                            </form>
+
+                            </li>
+                        </div>
+                        {{/if}}
+
+
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+
+        
+    </div>
+        <div id="container-week-button">
+            <form action="/home" method="post" role="form" enctype="application/x-www-form-urlencoded">
+            <button id="sunday"name="choice" type="submit" class="btn btn-primary" value="sunday" > S </button>
+            <button id="monday" name="choice" type="submit" class="btn btn-primary" value="monday" > M </button> 
+            <button id="tuesday" name="choice" type="submit" class="btn btn-primary" value="tuesday"> T </button>
+            <button id="wednesday" name="choice" type="submit" class="btn btn-primary" value="wednesday"> W </button>
+            <button id="thursday" name="choice" type="submit" class="btn btn-primary" value="thursday" > T </button>
+            <button id="friday"name="choice" type="submit" class="btn btn-primary" value="friday" > F </button>
+            <button id="saturday" name="choice" type="submit" class="btn btn-primary" value="saturday" > S </button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+
+
+{{!-- making the buttons later --}}
